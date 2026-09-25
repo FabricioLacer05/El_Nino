@@ -11,7 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ConsequenciasRouteImport } from './routes/consequencias'
+import { Route as EcossistemasRouteImport } from './routes/ecossistemas'
 import { Route as OFenomenoRouteImport } from './routes/o-fenomeno'
+import { Route as VidaMarinhaRouteImport } from './routes/vida-marinha'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -23,40 +25,65 @@ const ConsequenciasRoute = ConsequenciasRouteImport.update({
   path: '/consequencias',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EcossistemasRoute = EcossistemasRouteImport.update({
+  id: '/ecossistemas',
+  path: '/ecossistemas',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OFenomenoRoute = OFenomenoRouteImport.update({
   id: '/o-fenomeno',
   path: '/o-fenomeno',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VidaMarinhaRoute = VidaMarinhaRouteImport.update({
+  id: '/vida-marinha',
+  path: '/vida-marinha',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/consequencias': typeof ConsequenciasRoute
+  '/ecossistemas': typeof EcossistemasRoute
   '/o-fenomeno': typeof OFenomenoRoute
+  '/vida-marinha': typeof VidaMarinhaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/consequencias': typeof ConsequenciasRoute
+  '/ecossistemas': typeof EcossistemasRoute
   '/o-fenomeno': typeof OFenomenoRoute
+  '/vida-marinha': typeof VidaMarinhaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/consequencias': typeof ConsequenciasRoute
+  '/ecossistemas': typeof EcossistemasRoute
   '/o-fenomeno': typeof OFenomenoRoute
+  '/vida-marinha': typeof VidaMarinhaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/consequencias' | '/o-fenomeno'
+  fullPaths:
+    '/' | '/consequencias' | '/ecossistemas' | '/o-fenomeno' | '/vida-marinha'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/consequencias' | '/o-fenomeno'
-  id: '__root__' | '/' | '/consequencias' | '/o-fenomeno'
+  to: '/' | '/consequencias' | '/ecossistemas' | '/o-fenomeno' | '/vida-marinha'
+  id:
+    | '__root__'
+    | '/'
+    | '/consequencias'
+    | '/ecossistemas'
+    | '/o-fenomeno'
+    | '/vida-marinha'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ConsequenciasRoute: typeof ConsequenciasRoute
+  EcossistemasRoute: typeof EcossistemasRoute
   OFenomenoRoute: typeof OFenomenoRoute
+  VidaMarinhaRoute: typeof VidaMarinhaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -75,11 +102,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConsequenciasRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ecossistemas': {
+      id: '/ecossistemas'
+      path: '/ecossistemas'
+      fullPath: '/ecossistemas'
+      preLoaderRoute: typeof EcossistemasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/o-fenomeno': {
       id: '/o-fenomeno'
       path: '/o-fenomeno'
       fullPath: '/o-fenomeno'
       preLoaderRoute: typeof OFenomenoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vida-marinha': {
+      id: '/vida-marinha'
+      path: '/vida-marinha'
+      fullPath: '/vida-marinha'
+      preLoaderRoute: typeof VidaMarinhaRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -88,7 +129,9 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ConsequenciasRoute: ConsequenciasRoute,
+  EcossistemasRoute: EcossistemasRoute,
   OFenomenoRoute: OFenomenoRoute,
+  VidaMarinhaRoute: VidaMarinhaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

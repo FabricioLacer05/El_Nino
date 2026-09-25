@@ -150,9 +150,8 @@ function ConsequenciasPage() {
           </table>
         </div>
         <p className="mt-3 text-xs text-muted-foreground">
-          Padrões típicos em episódios de El Niño moderado a forte; cada evento
-          tem particularidades. Em caso de não entendimento de um termo, veja o
-          glossário rápido em “O Fenômeno”.
+          Padrões típicos de episódios de El Niño moderado a forte; cada
+          evento tem particularidades e exceções.
         </p>
       </Section>
 
