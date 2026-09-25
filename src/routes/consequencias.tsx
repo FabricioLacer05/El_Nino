@@ -64,7 +64,7 @@ const REGIONS = [
     region: "América do Norte",
     impact: "Invernos mais quentes e tempestades no sul",
     detail:
-      "O jato deópolis? Não: o jato subtropical desloca-se, trazendo inverno ameno ao norte dos EUA/Canadá e chuvas à Califórnia e ao Golfo do México.",
+      "O jato subtropical desloca-se, trazendo inverno ameno ao norte dos EUA/Canadá e chuvas à Califórnia e ao Golfo do México.",
   },
   {
     region: "Brasil",
@@ -113,7 +113,7 @@ function ConsequenciasPage() {
       <PageHero
         kicker="Capítulo 2 · Consequências"
         title="O aquecimento do Pacífico reorganiza o clima — e a vida das pessoas"
-        lead="O El Niño não muda só a temperatura do mar: ele desloca chuvas, ventos e correntes de jato. O resultado é uma Redistribution global de secas e enchentes, com efeitos na comida, na água, na saúde e na economia."
+        lead="O El Niño não muda só a temperatura do mar: ele desloca chuvas, ventos e correntes de jato. O resultado é uma redistribuição global de secas e enchentes, com efeitos na comida, na água, na saúde e na economia."
       />
 
       <Section title="Como um oceano distante muda o clima de outros continentes?" id="teleconexoes">
