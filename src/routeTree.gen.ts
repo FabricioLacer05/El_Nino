@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BrasilRouteImport } from './routes/brasil'
 import { Route as ConsequenciasRouteImport } from './routes/consequencias'
 import { Route as EcossistemasRouteImport } from './routes/ecossistemas'
 import { Route as OFenomenoRouteImport } from './routes/o-fenomeno'
@@ -18,6 +19,11 @@ import { Route as VidaMarinhaRouteImport } from './routes/vida-marinha'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BrasilRoute = BrasilRouteImport.update({
+  id: '/brasil',
+  path: '/brasil',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ConsequenciasRoute = ConsequenciasRouteImport.update({
@@ -43,6 +49,7 @@ const VidaMarinhaRoute = VidaMarinhaRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/brasil': typeof BrasilRoute
   '/consequencias': typeof ConsequenciasRoute
   '/ecossistemas': typeof EcossistemasRoute
   '/o-fenomeno': typeof OFenomenoRoute
@@ -50,6 +57,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/brasil': typeof BrasilRoute
   '/consequencias': typeof ConsequenciasRoute
   '/ecossistemas': typeof EcossistemasRoute
   '/o-fenomeno': typeof OFenomenoRoute
@@ -58,6 +66,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/brasil': typeof BrasilRoute
   '/consequencias': typeof ConsequenciasRoute
   '/ecossistemas': typeof EcossistemasRoute
   '/o-fenomeno': typeof OFenomenoRoute
@@ -66,12 +75,24 @@ export interface FileRoutesById {
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/consequencias' | '/ecossistemas' | '/o-fenomeno' | '/vida-marinha'
+    | '/'
+    | '/brasil'
+    | '/consequencias'
+    | '/ecossistemas'
+    | '/o-fenomeno'
+    | '/vida-marinha'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/consequencias' | '/ecossistemas' | '/o-fenomeno' | '/vida-marinha'
+  to:
+    | '/'
+    | '/brasil'
+    | '/consequencias'
+    | '/ecossistemas'
+    | '/o-fenomeno'
+    | '/vida-marinha'
   id:
     | '__root__'
     | '/'
+    | '/brasil'
     | '/consequencias'
     | '/ecossistemas'
     | '/o-fenomeno'
@@ -80,6 +101,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BrasilRoute: typeof BrasilRoute
   ConsequenciasRoute: typeof ConsequenciasRoute
   EcossistemasRoute: typeof EcossistemasRoute
   OFenomenoRoute: typeof OFenomenoRoute
@@ -93,6 +115,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/brasil': {
+      id: '/brasil'
+      path: '/brasil'
+      fullPath: '/brasil'
+      preLoaderRoute: typeof BrasilRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/consequencias': {
@@ -128,6 +157,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BrasilRoute: BrasilRoute,
   ConsequenciasRoute: ConsequenciasRoute,
   EcossistemasRoute: EcossistemasRoute,
   OFenomenoRoute: OFenomenoRoute,
