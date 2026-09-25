@@ -10,4 +10,4 @@
 - [x] Página "Brasil" com mapa de impactos
 - [x] Página "Dados": gráficos (ONI, temperatura global, pH do oceano)
 - [x] Página "Referências" científicas
-- [ ] Verificar build/preview e ajustes finais
+- [x] Verificar build/preview e ajustes finais
