@@ -10,33 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ConsequenciasRouteImport } from './routes/consequencias'
+import { Route as OFenomenoRouteImport } from './routes/o-fenomeno'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ConsequenciasRoute = ConsequenciasRouteImport.update({
+  id: '/consequencias',
+  path: '/consequencias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OFenomenoRoute = OFenomenoRouteImport.update({
+  id: '/o-fenomeno',
+  path: '/o-fenomeno',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/consequencias': typeof ConsequenciasRoute
+  '/o-fenomeno': typeof OFenomenoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/consequencias': typeof ConsequenciasRoute
+  '/o-fenomeno': typeof OFenomenoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/consequencias': typeof ConsequenciasRoute
+  '/o-fenomeno': typeof OFenomenoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/consequencias' | '/o-fenomeno'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/consequencias' | '/o-fenomeno'
+  id: '__root__' | '/' | '/consequencias' | '/o-fenomeno'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ConsequenciasRoute: typeof ConsequenciasRoute
+  OFenomenoRoute: typeof OFenomenoRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +68,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/consequencias': {
+      id: '/consequencias'
+      path: '/consequencias'
+      fullPath: '/consequencias'
+      preLoaderRoute: typeof ConsequenciasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/o-fenomeno': {
+      id: '/o-fenomeno'
+      path: '/o-fenomeno'
+      fullPath: '/o-fenomeno'
+      preLoaderRoute: typeof OFenomenoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ConsequenciasRoute: ConsequenciasRoute,
+  OFenomenoRoute: OFenomenoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
