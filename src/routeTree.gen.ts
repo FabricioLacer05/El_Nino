@@ -10,33 +10,128 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BrasilRouteImport } from './routes/brasil'
+import { Route as ConsequenciasRouteImport } from './routes/consequencias'
+import { Route as DadosRouteImport } from './routes/dados'
+import { Route as EcossistemasRouteImport } from './routes/ecossistemas'
+import { Route as OFenomenoRouteImport } from './routes/o-fenomeno'
+import { Route as ReferenciasRouteImport } from './routes/referencias'
+import { Route as VidaMarinhaRouteImport } from './routes/vida-marinha'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BrasilRoute = BrasilRouteImport.update({
+  id: '/brasil',
+  path: '/brasil',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsequenciasRoute = ConsequenciasRouteImport.update({
+  id: '/consequencias',
+  path: '/consequencias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DadosRoute = DadosRouteImport.update({
+  id: '/dados',
+  path: '/dados',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EcossistemasRoute = EcossistemasRouteImport.update({
+  id: '/ecossistemas',
+  path: '/ecossistemas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OFenomenoRoute = OFenomenoRouteImport.update({
+  id: '/o-fenomeno',
+  path: '/o-fenomeno',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReferenciasRoute = ReferenciasRouteImport.update({
+  id: '/referencias',
+  path: '/referencias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VidaMarinhaRoute = VidaMarinhaRouteImport.update({
+  id: '/vida-marinha',
+  path: '/vida-marinha',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/brasil': typeof BrasilRoute
+  '/consequencias': typeof ConsequenciasRoute
+  '/dados': typeof DadosRoute
+  '/ecossistemas': typeof EcossistemasRoute
+  '/o-fenomeno': typeof OFenomenoRoute
+  '/referencias': typeof ReferenciasRoute
+  '/vida-marinha': typeof VidaMarinhaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/brasil': typeof BrasilRoute
+  '/consequencias': typeof ConsequenciasRoute
+  '/dados': typeof DadosRoute
+  '/ecossistemas': typeof EcossistemasRoute
+  '/o-fenomeno': typeof OFenomenoRoute
+  '/referencias': typeof ReferenciasRoute
+  '/vida-marinha': typeof VidaMarinhaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/brasil': typeof BrasilRoute
+  '/consequencias': typeof ConsequenciasRoute
+  '/dados': typeof DadosRoute
+  '/ecossistemas': typeof EcossistemasRoute
+  '/o-fenomeno': typeof OFenomenoRoute
+  '/referencias': typeof ReferenciasRoute
+  '/vida-marinha': typeof VidaMarinhaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/brasil'
+    | '/consequencias'
+    | '/dados'
+    | '/ecossistemas'
+    | '/o-fenomeno'
+    | '/referencias'
+    | '/vida-marinha'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/brasil'
+    | '/consequencias'
+    | '/dados'
+    | '/ecossistemas'
+    | '/o-fenomeno'
+    | '/referencias'
+    | '/vida-marinha'
+  id:
+    | '__root__'
+    | '/'
+    | '/brasil'
+    | '/consequencias'
+    | '/dados'
+    | '/ecossistemas'
+    | '/o-fenomeno'
+    | '/referencias'
+    | '/vida-marinha'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BrasilRoute: typeof BrasilRoute
+  ConsequenciasRoute: typeof ConsequenciasRoute
+  DadosRoute: typeof DadosRoute
+  EcossistemasRoute: typeof EcossistemasRoute
+  OFenomenoRoute: typeof OFenomenoRoute
+  ReferenciasRoute: typeof ReferenciasRoute
+  VidaMarinhaRoute: typeof VidaMarinhaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +143,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/brasil': {
+      id: '/brasil'
+      path: '/brasil'
+      fullPath: '/brasil'
+      preLoaderRoute: typeof BrasilRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consequencias': {
+      id: '/consequencias'
+      path: '/consequencias'
+      fullPath: '/consequencias'
+      preLoaderRoute: typeof ConsequenciasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dados': {
+      id: '/dados'
+      path: '/dados'
+      fullPath: '/dados'
+      preLoaderRoute: typeof DadosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ecossistemas': {
+      id: '/ecossistemas'
+      path: '/ecossistemas'
+      fullPath: '/ecossistemas'
+      preLoaderRoute: typeof EcossistemasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/o-fenomeno': {
+      id: '/o-fenomeno'
+      path: '/o-fenomeno'
+      fullPath: '/o-fenomeno'
+      preLoaderRoute: typeof OFenomenoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/referencias': {
+      id: '/referencias'
+      path: '/referencias'
+      fullPath: '/referencias'
+      preLoaderRoute: typeof ReferenciasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vida-marinha': {
+      id: '/vida-marinha'
+      path: '/vida-marinha'
+      fullPath: '/vida-marinha'
+      preLoaderRoute: typeof VidaMarinhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BrasilRoute: BrasilRoute,
+  ConsequenciasRoute: ConsequenciasRoute,
+  DadosRoute: DadosRoute,
+  EcossistemasRoute: EcossistemasRoute,
+  OFenomenoRoute: OFenomenoRoute,
+  ReferenciasRoute: ReferenciasRoute,
+  VidaMarinhaRoute: VidaMarinhaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
