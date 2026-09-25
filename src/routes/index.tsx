@@ -178,7 +178,12 @@ function Index() {
               title: "3 · O clima global reage",
               text: "Chuvas, secas e ondas de calor mudam de padrão em continentes inteiros.",
             },
-          ] as const}
+          ].map((step) => (
+            <div key={step.title} className="rounded-3xl border border-border bg-card p-6">
+              <h3 className="font-display text-base font-bold text-primary">{step.title}</h3>
+              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{step.text}</p>
+            </div>
+          ))}
         </div>
       </section>
 
