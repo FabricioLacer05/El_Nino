@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import {
   ArrowRight,
   BarChart3,
@@ -14,15 +14,7 @@ import {
 import heroOcean from "../assets/hero-ocean.jpg";
 import { PacificDiagram } from "../components/pacific-diagram";
 
-export const Route = createFileRouteForHome();
-
-import { createFileRoute } from "@tanstack/react-router";
-
-function createFileRouteForHome() {
-  return undefined;
-}
-
-export const HomeRoute = createFileRoute("/")({
+export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "El Niño.guiado — Entenda o fenômeno que muda o clima" },
