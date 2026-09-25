@@ -58,8 +58,9 @@ export function PacificDiagram({ compact = false }: { compact?: boolean }) {
           <linearGradient id="diagram-surface" x1="0" y1="0" x2="1" y2="0">
             {isNino ? (
               <>
-                <stop offset="0%" stopColor="oklch(0.84 0.1 70)" />
-                <stop offset="55%" stopColor="oklch(0.86 0.12 55)" />
+                <stop offset="0%" stopColor="oklch(0.8 0.075 205)" />
+                <stop offset="35%" stopColor="oklch(0.83 0.08 150)" />
+                <stop offset="65%" stopColor="oklch(0.86 0.12 55)" />
                 <stop offset="100%" stopColor="oklch(0.88 0.14 48)" />
               </>
             ) : (
@@ -171,7 +172,7 @@ export function PacificDiagram({ compact = false }: { compact?: boolean }) {
         {isNino ? (
           <g opacity="0.35">
             <line x1="540" y1="270" x2="540" y2="200" stroke="oklch(0.9 0.03 230)" strokeWidth="2.5" strokeDasharray="4 5" markerEnd="url(#diagram-arrow-cold)" />
-            <text x="552" y="262" fontSize="11" fill="oklch(0.95 0.02 230)" opacity="0.8">
+            <text x="556" y="262" textAnchor="end" fontSize="11" fill="oklch(0.95 0.02 230)" opacity="0.8">
               ressurgência fraca
             </text>
           </g>
@@ -188,7 +189,14 @@ export function PacificDiagram({ compact = false }: { compact?: boolean }) {
         <text x={isNino ? 470 : 170} y={isNino ? 152 : 132} textAnchor="middle" fontSize="12.5" fontWeight="700" fill="oklch(0.3 0.08 50)">
           {isNino ? "água quente se espalha para o leste" : "poça de água quente (oeste)"}
         </text>
-        <text x={isNino ? 548 : 116} y={isNino ? 238 : 136} textAnchor={isNino ? "start" : "start"} fontSize="11.5" fill="oklch(0.96 0.01 230)" fontWeight="600" transform={isNino ? "translate(-64 6)" : "translate(4 26)"}>
+        <text
+          x={isNino ? 250 : 470}
+          y={isNino ? 208 : 130}
+          textAnchor="middle"
+          fontSize="11.5"
+          fill="oklch(0.96 0.01 230)"
+          fontWeight="600"
+        >
           termoclina {isNino ? "afundada" : "rasa"}
         </text>
 
