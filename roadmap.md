@@ -1,13 +1,8 @@
-# Roadmap — Site educativo El Niño
+# Roadmap — El Niño.guiado
 
-- [x] Sistema de design (tema oceânico claro, azul) + imagens hero/coral/Amazonas
-- [x] Layout raiz: navegação entre seções + rodapé + fontes
-- [x] Página inicial: hero + destaque visual explicando o El Niño + cartões das seções
-- [x] Página "O Fenômeno": mecânica do ENSO, diagrama interativo Pacífico
-- [x] Página "Consequências socioambientais"
-- [x] Página "Ecossistemas"
-- [x] Página "Vida Marinha e Acidificação"
-- [x] Página "Brasil" com mapa de impactos
-- [x] Página "Dados": gráficos (ONI, temperatura global, pH do oceano)
-- [x] Página "Referências" científicas
-- [x] Verificar build/preview e ajustes finais
+- [x] Tema oceano claro (tokens oklch, fontes, imagens)
+- [x] Página inicial com diagrama interativo do Pacífico
+- [x] 7 seções de conteúdo (fenômeno, consequências, ecossistemas, vida marinha, Brasil, dados, referências)
+- [x] Verificação build + Playwright (home, diagrama, gráficos, mapa)
+- [ ] Expandir página Consequências com pesquisa do usuário: efeitos por continente (América do Sul, Oceania, América do Norte/Central/Caribe, Ásia, África, Antártida, Europa), teleconexões (IOD, NAO, SAM, Walker, Rossby, tipos Costeiro/Centro-Pacífico, episódio 2026), impactos socioeconômicos e novas referências
+- [ ] Rodar atualização de segurança dos pacotes TanStack
