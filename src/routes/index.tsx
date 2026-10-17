@@ -117,7 +117,7 @@ function Index() {
         <div className="mx-auto max-w-6xl px-4 pb-20 pt-16 sm:px-6 sm:pt-24 sm:pb-28">
           <p className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-4 py-1.5 text-xs font-semibold tracking-wide text-primary uppercase backdrop-blur">
             <Droplets className="size-3.5" aria-hidden />
-            Projeto educativo · Ensino médio
+            Projeto extensionista educativo
           </p>
           <h1 className="mt-6 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground text-balance sm:text-6xl">
             El Niño: o aquecimento do Pacífico que muda o clima do mundo
