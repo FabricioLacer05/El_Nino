@@ -58,7 +58,7 @@ const SECTIONS = [
     icon: Fish,
     title: "Vida marinha e Ecossistema",
     description:
-      "Corais branqueados, ressurgência que colapsa, Galápagos, espécies em migração e a acidificação dos oceanos.",
+      "Produtividade do mar, acidificação e espécies mudando de lugar: o que acontece com a vida no oceano.",
   },
   {
     to: "/brasil",
