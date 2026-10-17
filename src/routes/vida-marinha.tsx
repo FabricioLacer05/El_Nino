@@ -320,23 +320,11 @@ function VidaMarinhaPage() {
           />
         </div>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-3">
-          {CALCIFIERS.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-3xl border border-border bg-card p-6"
-            >
-              <span className="flex size-10 items-center justify-center rounded-2xl bg-secondary text-primary">
-                <item.icon className="size-5" aria-hidden />
-              </span>
-              <h3 className="mt-3 font-display text-base font-bold">
-                {item.title}
-              </h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
-                {item.text}
-              </p>
-            </div>
-          ))}
+        <div className="mt-10">
+          <BubbleCarousel
+            label="Organismos mais afetados pela acidificação"
+            bubbles={CALCIFIERS}
+          />
         </div>
 
         <div className="mt-6">
