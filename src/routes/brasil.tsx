@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Droplets, Gauge, HeartPulse, Sprout, Sun } from "lucide-react";
 
 import amazonDrought from "../assets/amazon-drought.jpg";
+import { BrazilMap } from "../components/brazil-map";
 import { Callout, PageHero, Section } from "../components/page-hero";
 
 export const Route = createFileRoute("/brasil")({
@@ -32,38 +33,48 @@ export const Route = createFileRoute("/brasil")({
 const REGIONS = [
   {
     name: "Norte",
+    slug: "regiao-norte",
     impact: "Seca severa",
     detail:
       "Rios encolhem, comunidades ribeirinhas ficam isoladas e as queimadas se multiplicam. Em 2023, o Rio Negro chegou ao menor nível já medido em Manaus em mais de 120 anos.",
-    color: "fill-chart-4",
+    dot: "bg-chart-4",
+    more: { href: "#amazonia", label: "A Amazônia em chamas e seca" },
   },
   {
     name: "Nordeste",
+    slug: "regiao-nordeste",
     impact: "Seca no semiárido",
     detail:
       "Chuvas ficam abaixo da média no semiárido, afetando reservatórios e a agricultura de subsistência; o litoral pode ter chuvas irregulares.",
-    color: "fill-chart-5",
+    dot: "bg-chart-5",
+    more: { href: "#cotidiano", label: "Água, energia e agricultura" },
   },
   {
     name: "Centro-Oeste",
+    slug: "regiao-centro-oeste",
     impact: "Chuvas atrasadas",
     detail:
       "O plantio da soja atrasa e o milho “safrinha” pode ser semeado fora da janela ideal, quando as chuvas já estão recuando.",
-    color: "fill-chart-2",
+    dot: "bg-chart-2",
+    more: { href: "#cotidiano", label: "Impactos na agricultura" },
   },
   {
     name: "Sudeste",
+    slug: "regiao-sudeste",
     impact: "Padrão misto",
     detail:
       "Chuvas irregulares e calor extremo; em alguns episódios há blocos de ar seco e recordes de temperatura nas grandes cidades.",
-    color: "fill-chart-1",
+    dot: "bg-chart-1",
+    more: { href: "#cotidiano", label: "Energia elétrica e saúde" },
   },
   {
     name: "Sul",
+    slug: "regiao-sul",
     impact: "Chuvas acima da média",
     detail:
       "Passagens de frentes frias e umidade extra intensificam tempestades e enchentes — como as do Rio Grande do Sul em 2023 e 2024.",
-    color: "fill-chart-3",
+    dot: "bg-chart-3",
+    more: { href: "/consequencias", label: "Enchentes e efeitos na América do Sul" },
   },
 ] as const;
 
@@ -101,64 +112,46 @@ function BrasilPage() {
 
       <Section title="O mapa dos impactos" eyebrow="Região por região">
         <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr]">
-          <div className="rounded-3xl border border-border bg-card p-6">
-            <svg
-              viewBox="0 0 110 128"
-              className="block w-full"
-              role="img"
-              aria-label="Mapa esquemático do Brasil com as regiões coloridas conforme o impacto típico do El Niño"
-            >
-              {/* contorno esquemático do Brasil */}
-              <path
-                d="M 20 20 C 27 12 38 10 45 14 C 53 10 62 12 66 18 C 73 16 79 22 77 30 C 83 34 85 42 79 46 C 83 50 81 58 75 60 C 77 68 73 76 67 80 C 65 88 59 96 55 104 C 52 110 47 114 45 108 C 43 102 39 98 33 94 C 25 88 19 80 17 70 C 13 60 11 46 13 36 C 14 29 16 24 20 20 Z"
-                className="fill-secondary"
-              />
-              <path
-                d="M 20 20 C 27 12 38 10 45 14 C 53 10 62 12 66 18 C 73 16 79 22 77 30 C 83 34 85 42 79 46 C 83 50 81 58 75 60 C 77 68 73 76 67 80 C 65 88 59 96 55 104 C 52 110 47 114 45 108 C 43 102 39 98 33 94 C 25 88 19 80 17 70 C 13 60 11 46 13 36 C 14 29 16 24 20 20 Z"
-                fill="none"
-                className="stroke-primary"
-                strokeWidth="1.2"
-              />
-              {/* zonas de impacto */}
-              <ellipse cx="30" cy="30" rx="12" ry="9" className="fill-chart-4/55" />
-              <ellipse cx="62" cy="28" rx="9" ry="7" className="fill-chart-5/55" />
-              <ellipse cx="45" cy="52" rx="10" ry="9" className="fill-chart-2/55" />
-              <ellipse cx="66" cy="58" rx="7" ry="7" className="fill-chart-1/50" />
-              <ellipse cx="52" cy="98" rx="8" ry="9" className="fill-chart-3/55" />
-              {/* rótulos */}
-              <text x="30" y="31" textAnchor="middle" fontSize="4.6" fontWeight="700" fill="oklch(0.3 0.05 250)">Norte</text>
-              <text x="62" y="29" textAnchor="middle" fontSize="4.2" fontWeight="700" fill="oklch(0.3 0.05 250)">Nordeste</text>
-              <text x="45" y="53" textAnchor="middle" fontSize="4.2" fontWeight="700" fill="oklch(0.3 0.05 250)">Centro-Oeste</text>
-              <text x="66" y="59" textAnchor="middle" fontSize="4" fontWeight="700" fill="oklch(0.98 0 0)">Sudeste</text>
-              <text x="52" y="99" textAnchor="middle" fontSize="4.4" fontWeight="700" fill="oklch(0.3 0.05 250)">Sul</text>
-            </svg>
+          <div className="h-fit rounded-3xl border border-border bg-card p-6 lg:sticky lg:top-24">
+            <BrazilMap />
             <div className="mt-4 flex flex-wrap gap-2">
               {REGIONS.map((region) => (
-                <span
+                <a
                   key={region.name}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-border bg-secondary/60 px-3 py-1 text-xs font-semibold text-foreground"
+                  href={`#${region.slug}`}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-border bg-secondary/60 px-3 py-1 text-xs font-semibold text-foreground transition-colors hover:bg-secondary"
                 >
-                  <span className={`size-2.5 rounded-full ${region.color}`} />
+                  <span className={`size-2.5 rounded-full ${region.dot}`} />
                   {region.name}
-                </span>
+                </a>
               ))}
             </div>
             <p className="mt-3 text-xs text-muted-foreground">
-              Mapa esquemático, sem escala real. Cores indicam o impacto típico
-              descrito ao lado, não a intensidade exata.
+              Contornos reais dos estados (IBGE). Clique numa região para ver
+              seus impactos. As cores indicam o impacto típico, não a intensidade exata.
             </p>
           </div>
           <div className="space-y-3">
             {REGIONS.map((region) => (
-              <div key={region.name} className="rounded-3xl border border-border bg-card p-5">
+              <div
+                key={region.name}
+                id={region.slug}
+                className="scroll-mt-24 rounded-3xl border border-border bg-card p-5 target:ring-2 target:ring-primary"
+              >
                 <div className="flex items-center gap-3">
-                  <span className={`size-3 shrink-0 rounded-full ${region.color}`} />
+                  <span className={`size-3 shrink-0 rounded-full ${region.dot}`} />
                   <h3 className="font-display text-base font-bold">{region.name}</h3>
                   <span className="rounded-full bg-secondary px-2.5 py-0.5 text-xs font-bold text-secondary-foreground">
                     {region.impact}
                   </span>
                 </div>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{region.detail}</p>
+                <a
+                  href={region.more.href}
+                  className="mt-3 inline-block text-sm font-semibold text-primary hover:underline"
+                >
+                  {region.more.label} →
+                </a>
               </div>
             ))}
           </div>
@@ -200,7 +193,7 @@ function BrasilPage() {
         </div>
       </Section>
 
-      <Section title="No cotidiano brasileiro" eyebrow="Onde o fenômeno aparece">
+      <Section title="No cotidiano brasileiro" id="cotidiano" eyebrow="Onde o fenômeno aparece">
         <div className="grid gap-4 sm:grid-cols-2">
           {IMPACTS.map((impact) => (
             <div key={impact.title} className="rounded-3xl border border-border bg-card p-6">
