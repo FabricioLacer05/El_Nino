@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 
 import coralReef from "../assets/coral-reef.jpg";
+import { BubbleCarousel } from "../components/bubble-carousel";
 import { Callout, PageHero, Section } from "../components/page-hero";
 
 export const Route = createFileRoute("/vida-marinha")({
@@ -75,22 +76,26 @@ const UPWELLING = [
 
 const CHEMISTRY = [
   {
-    step: "1",
+    kicker: "Reação 1",
+    title: "O oceano absorve o CO₂",
     formula: "CO₂ (ar) → CO₂ (água)",
     text: "O oceano absorve cerca de 25% a 30% do CO₂ que lançamos na atmosfera. É um ‘amortecedor’ para o clima — e um problema para a química do mar.",
   },
   {
-    step: "2",
+    kicker: "Reação 2",
+    title: "Nasce o ácido carbônico",
     formula: "CO₂ + H₂O → H₂CO₃ → H⁺ + HCO₃⁻",
     text: "O CO₂ reage com a água e forma ácido carbônico (H₂CO₃), que se dissocia liberando íons hidrogênio (H⁺). Mais H⁺ significa pH mais baixo: água mais ácida.",
   },
   {
-    step: "3",
+    kicker: "Reação 3",
+    title: "O carbonato some",
     formula: "H⁺ + CO₃²⁻ → 2 HCO₃⁻",
     text: "O H⁺ ‘sequestra’ os íons carbonato (CO₃²⁻) para formar bicarbonato. Resultado: sobra menos carbonato disponível para os seres vivos.",
   },
   {
-    step: "4",
+    kicker: "Reação 4",
+    title: "Conchas e esqueletos",
     formula: "Ca²⁺ + CO₃²⁻ → CaCO₃",
     text: "É assim que corais, moluscos e plâncton calcificado constroem conchas e esqueletos. Sem carbonato suficiente, o animal gasta mais energia para se construir — e conchas já prontas podem começar a dissolver.",
   },
@@ -306,40 +311,20 @@ function VidaMarinhaPage() {
               começar a <em>dissolver</em>.
             </p>
           </div>
-          <div className="space-y-3">
-            {CHEMISTRY.map((item) => (
-              <div
-                key={item.step}
-                className="rounded-3xl border border-border bg-card p-5"
-              >
-                <p className="font-mono text-sm font-bold text-primary">
-                  {item.formula}
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {item.text}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-3">
-          {CALCIFIERS.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-3xl border border-border bg-card p-6"
-            >
-              <span className="flex size-10 items-center justify-center rounded-2xl bg-secondary text-primary">
-                <item.icon className="size-5" aria-hidden />
-              </span>
-              <h3 className="mt-3 font-display text-base font-bold">
-                {item.title}
-              </h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
-                {item.text}
-              </p>
-            </div>
-          ))}
+        <div className="mt-8">
+          <BubbleCarousel
+            label="Reações químicas da acidificação"
+            bubbles={CHEMISTRY}
+          />
+        </div>
+
+        <div className="mt-10">
+          <BubbleCarousel
+            label="Organismos mais afetados pela acidificação"
+            bubbles={CALCIFIERS}
+          />
         </div>
 
         <div className="mt-6">
@@ -371,24 +356,10 @@ function VidaMarinhaPage() {
         eyebrow="Tema 3"
         id="distribuicao"
       >
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {DISTRIBUTION.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-3xl border border-border bg-card p-6"
-            >
-              <span className="flex size-10 items-center justify-center rounded-2xl bg-secondary text-primary">
-                <item.icon className="size-5" aria-hidden />
-              </span>
-              <h3 className="mt-3 font-display text-base font-bold">
-                {item.title}
-              </h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
-                {item.text}
-              </p>
-            </div>
-          ))}
-        </div>
+        <BubbleCarousel
+          label="Mudanças na distribuição das espécies"
+          bubbles={DISTRIBUTION}
+        />
         <Callout title="Quem decide para onde o peixe vai?">
           Não é “vontade” da espécie: são limites fisiológicos. Cada peixe tem
           uma faixa de temperatura em que consegue respirar, crescer e se
