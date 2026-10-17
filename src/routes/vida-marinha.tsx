@@ -356,24 +356,10 @@ function VidaMarinhaPage() {
         eyebrow="Tema 3"
         id="distribuicao"
       >
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {DISTRIBUTION.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-3xl border border-border bg-card p-6"
-            >
-              <span className="flex size-10 items-center justify-center rounded-2xl bg-secondary text-primary">
-                <item.icon className="size-5" aria-hidden />
-              </span>
-              <h3 className="mt-3 font-display text-base font-bold">
-                {item.title}
-              </h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
-                {item.text}
-              </p>
-            </div>
-          ))}
-        </div>
+        <BubbleCarousel
+          label="Mudanças na distribuição das espécies"
+          bubbles={DISTRIBUTION}
+        />
         <Callout title="Quem decide para onde o peixe vai?">
           Não é “vontade” da espécie: são limites fisiológicos. Cada peixe tem
           uma faixa de temperatura em que consegue respirar, crescer e se
