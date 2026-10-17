@@ -8,3 +8,4 @@
 - [x] Rodar atualização de segurança dos pacotes TanStack
 - [x] Trocar o destaque inicial: "Projeto educativo · Ensino médio" → "Projeto extensionista educativo"
 - [x] Renomear seção "Dados" → "Histórico do fenômeno" (menu, card da home, título da página, kicker e nota de referência)
+- [x] Unir Ecossistemas + Vida Marinha na página "Vida marinha e Ecossistema" (menu "Como fica o oceano?", redirecionamento de /ecossistemas, card único na home, renumeração dos capítulos 4-6)
