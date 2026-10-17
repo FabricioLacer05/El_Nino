@@ -20,7 +20,7 @@ const NAV_LINKS = [
   { to: "/ecossistemas", label: "Ecossistemas" },
   { to: "/vida-marinha", label: "Vida Marinha" },
   { to: "/brasil", label: "Brasil" },
-  { to: "/dados", label: "Dados" },
+  { to: "/dados", label: "Histórico do fenômeno" },
   { to: "/referencias", label: "Referências" },
 ] as const;
 
