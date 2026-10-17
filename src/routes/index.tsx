@@ -6,7 +6,6 @@ import {
   CloudRain,
   Droplets,
   Fish,
-  Globe2,
   MapPinned,
   Waves,
 } from "lucide-react";
