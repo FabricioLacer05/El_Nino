@@ -43,13 +43,13 @@ function SiteHeader() {
           </span>
         </Link>
 
-        <nav aria-label="Navegação principal" className="hidden items-center gap-1 lg:flex">
+        <nav aria-label="Navegação principal" className="hidden items-center gap-0.5 xl:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.to}
               to={link.to}
               activeProps={{ className: "bg-secondary text-secondary-foreground" }}
-              className="rounded-full px-3 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary/70 hover:text-secondary-foreground"
+              className="rounded-full px-2.5 py-1.5 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-secondary/70 hover:text-secondary-foreground"
             >
               {link.label}
             </Link>
@@ -61,14 +61,14 @@ function SiteHeader() {
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex size-10 items-center justify-center rounded-full border border-border bg-card text-foreground lg:hidden"
+          className="flex size-10 items-center justify-center rounded-full border border-border bg-card text-foreground xl:hidden"
         >
           {open ? <X className="size-5" /> : <Menu className="size-5" />}
         </button>
       </div>
 
       {open && (
-        <nav aria-label="Navegação principal (menu)" className="border-t border-border bg-background px-4 pb-4 pt-2 lg:hidden">
+        <nav aria-label="Navegação principal (menu)" className="border-t border-border bg-background px-4 pb-4 pt-2 xl:hidden">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.to}
