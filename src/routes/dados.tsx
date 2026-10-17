@@ -19,13 +19,13 @@ import { Callout, PageHero, Section } from "../components/page-hero";
 export const Route = createFileRoute("/dados")({
   head: () => ({
     meta: [
-      { title: "Dados e gráficos do El Niño | El Niño.guiado" },
+      { title: "Histórico do fenômeno El Niño | El Niño.guiado" },
       {
         name: "description",
         content:
           "Gráficos educativos sobre o El Niño: índice Niño-Oceânico (ONI) dos grandes episódios, anomalia de temperatura global e a queda do pH do oceano.",
       },
-      { property: "og:title", content: "Dados e gráficos do El Niño" },
+      { property: "og:title", content: "Histórico do fenômeno El Niño" },
       {
         property: "og:description",
         content:
@@ -89,7 +89,7 @@ function DadosPage() {
   return (
     <div>
       <PageHero
-        kicker="Capítulo 6 · Dados"
+        kicker="Capítulo 6 · Histórico do fenômeno"
         title="Lendo o El Niño em números"
         lead="Três gráficos, três histórias: a força de cada episódio, a temperatura do planeta e a química do oceano. Os valores são aproximados a partir de fontes oficiais, com finalidade didática."
       />

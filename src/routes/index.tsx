@@ -78,7 +78,7 @@ const SECTIONS = [
   {
     to: "/dados",
     icon: BarChart3,
-    title: "Dados",
+    title: "Histórico do fenômeno",
     description:
       "Gráficos com índice Niño-Oceânico, temperatura global e pH do oceano para interpretar.",
   },
