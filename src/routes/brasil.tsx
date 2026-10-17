@@ -193,7 +193,7 @@ function BrasilPage() {
         </div>
       </Section>
 
-      <Section title="No cotidiano brasileiro" eyebrow="Onde o fenômeno aparece">
+      <Section title="No cotidiano brasileiro" id="cotidiano" eyebrow="Onde o fenômeno aparece">
         <div className="grid gap-4 sm:grid-cols-2">
           {IMPACTS.map((impact) => (
             <div key={impact.title} className="rounded-3xl border border-border bg-card p-6">
