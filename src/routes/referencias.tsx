@@ -88,6 +88,30 @@ const PAPERS = [
     ref: "CAI, W. et al. Increased frequency of extreme El Niño events due to greenhouse warming. Nature Climate Change, v. 4, p. 111–116, 2014.",
     note: "Projeta El Niños extremos mais frequentes com o aquecimento global.",
   },
+  {
+    ref: "CAI, W. et al. Climate impacts of the El Niño–Southern Oscillation on South America. Nature Reviews Earth & Environment, v. 1, n. 4, p. 215–231, 2020.",
+    note: "Revisão completa dos impactos do El Niño na América do Sul.",
+  },
+  {
+    ref: "CAI, W. et al. Climate impacts of the El Niño–Southern Oscillation in Africa. Nature Reviews Earth & Environment, v. 6, n. 8, p. 503–520, 2025.",
+    note: "Como o El Niño afeta secas, chuvas e ecossistemas africanos.",
+  },
+  {
+    ref: "TASCHETTO, A. S. et al. Climate impacts of the El Niño–Southern Oscillation on Australia. Nature Reviews Earth & Environment, v. 7, n. 2, p. 103–123, 2026.",
+    note: "Os efeitos do El Niño sobre secas, monções e queimadas na Austrália.",
+  },
+  {
+    ref: "BRÖNNIMANN, S. Impact of El Niño–Southern Oscillation on European climate. Reviews of Geophysics, v. 45, n. 3, 2007.",
+    note: "Por que a influência do El Niño sobre a Europa é controversa e indireta.",
+  },
+  {
+    ref: "TURNER, J. The El Niño–Southern Oscillation and Antarctica. International Journal of Climatology, v. 24, n. 1, p. 1–31, 2004.",
+    note: "Os efeitos do El Niño sobre o gelo marinho e o clima da Antártida.",
+  },
+  {
+    ref: "ALIZADEH, O.; MOUSAVIZADEH, M. Impact of ENSO on extreme precipitation in Southwest Asia. Global and Planetary Change, v. 244, p. 104645, 2025.",
+    note: "Chuvas extremas no Oriente Médio durante episódios de El Niño.",
+  },
 ] as const;
 
 function ReferenciasPage() {
