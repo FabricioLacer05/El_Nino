@@ -311,21 +311,13 @@ function VidaMarinhaPage() {
               começar a <em>dissolver</em>.
             </p>
           </div>
-          <div className="space-y-3">
-            {CHEMISTRY.map((item) => (
-              <div
-                key={item.step}
-                className="rounded-3xl border border-border bg-card p-5"
-              >
-                <p className="font-mono text-sm font-bold text-primary">
-                  {item.formula}
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {item.text}
-                </p>
-              </div>
-            ))}
-          </div>
+        </div>
+
+        <div className="mt-8">
+          <BubbleCarousel
+            label="Reações químicas da acidificação"
+            bubbles={CHEMISTRY}
+          />
         </div>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
