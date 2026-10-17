@@ -105,7 +105,7 @@ function BrasilPage() {
   return (
     <div>
       <PageHero
-        kicker="Capítulo 5 · Seção especial: Brasil"
+        kicker="Capítulo 4 · Seção especial: Brasil"
         title="Do Rio Negro ao Rio Grande do Sul: o El Niño visto do Brasil"
         lead="O Brasil fica a milhares de quilômetros do Pacífico, mas sente o El Niño de perto. O fenômeno reorganiza as chuvas na América do Sul em dois eixos: mais seca no Norte e Nordeste, mais chuva no Sul."
       />

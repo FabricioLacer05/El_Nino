@@ -118,7 +118,7 @@ function ReferenciasPage() {
   return (
     <div>
       <PageHero
-        kicker="Capítulo 7 · Referências"
+        kicker="Capítulo 6 · Referências"
         title="Fontes científicas deste guia"
         lead="Todo o conteúdo deste site foi escrito a partir de fontes oficiais e artigos científicos revisados por pares. Confira abaixo — e use-as para aprofundar seus estudos ou citar em trabalhos escolares."
       />

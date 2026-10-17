@@ -8,3 +8,5 @@
 - [x] Rodar atualização de segurança dos pacotes TanStack
 - [x] Trocar o destaque inicial: "Projeto educativo · Ensino médio" → "Projeto extensionista educativo"
 - [x] Renomear seção "Dados" → "Histórico do fenômeno" (menu, card da home, título da página, kicker e nota de referência)
+- [x] Unir Ecossistemas + Vida Marinha na página "Vida marinha e Ecossistema" (menu "Como fica o oceano?", redirecionamento de /ecossistemas, card único na home, renumeração dos capítulos 4-6)
+- [x] Detalhar o capítulo unificado "Vida marinha e Ecossistema: e como fica o oceano?": (1) produtividade — ressurgência da Corrente de Humboldt, afundamento da termoclina, queda do fitoplâncton, cascata trófica e pesca; (2) acidificação — reações de absorção de CO₂, perda de carbonato para calcificação, sinergia com estresse térmico em corais, moluscos e pterópodes; (3) distribuição de espécies — redistribuição geográfica, migração vertical, invasão de espécies tropicais, fuga/morte de espécies frias, hipóxia, impactos reprodutivos. Menu, rodapé e card da home atualizados.

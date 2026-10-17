@@ -6,7 +6,6 @@ import {
   CloudRain,
   Droplets,
   Fish,
-  Globe2,
   MapPinned,
   Waves,
 } from "lucide-react";
@@ -55,18 +54,11 @@ const SECTIONS = [
       "Secas, enchentes, perdas na agricultura e riscos à saúde: o efeito dominó do aquecimento do Pacífico.",
   },
   {
-    to: "/ecossistemas",
-    icon: Globe2,
-    title: "Ecossistemas",
-    description:
-      "Recifes de coral, ressurgência, Galápagos e florestas: como a vida na Terra sente o El Niño.",
-  },
-  {
     to: "/vida-marinha",
     icon: Fish,
-    title: "Vida Marinha",
+    title: "Vida marinha e Ecossistema",
     description:
-      "Organismos marinhos em risco e a acidificação dos oceanos — a outra face do CO₂ no mar.",
+      "Produtividade do mar, acidificação e espécies mudando de lugar: o que acontece com a vida no oceano.",
   },
   {
     to: "/brasil",
