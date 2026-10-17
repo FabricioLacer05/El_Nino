@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 
 import coralReef from "../assets/coral-reef.jpg";
+import { BubbleCarousel } from "../components/bubble-carousel";
 import { Callout, PageHero, Section } from "../components/page-hero";
 
 export const Route = createFileRoute("/vida-marinha")({
@@ -75,22 +76,26 @@ const UPWELLING = [
 
 const CHEMISTRY = [
   {
-    step: "1",
+    kicker: "Reação 1",
+    title: "O oceano absorve o CO₂",
     formula: "CO₂ (ar) → CO₂ (água)",
     text: "O oceano absorve cerca de 25% a 30% do CO₂ que lançamos na atmosfera. É um ‘amortecedor’ para o clima — e um problema para a química do mar.",
   },
   {
-    step: "2",
+    kicker: "Reação 2",
+    title: "Nasce o ácido carbônico",
     formula: "CO₂ + H₂O → H₂CO₃ → H⁺ + HCO₃⁻",
     text: "O CO₂ reage com a água e forma ácido carbônico (H₂CO₃), que se dissocia liberando íons hidrogênio (H⁺). Mais H⁺ significa pH mais baixo: água mais ácida.",
   },
   {
-    step: "3",
+    kicker: "Reação 3",
+    title: "O carbonato some",
     formula: "H⁺ + CO₃²⁻ → 2 HCO₃⁻",
     text: "O H⁺ ‘sequestra’ os íons carbonato (CO₃²⁻) para formar bicarbonato. Resultado: sobra menos carbonato disponível para os seres vivos.",
   },
   {
-    step: "4",
+    kicker: "Reação 4",
+    title: "Conchas e esqueletos",
     formula: "Ca²⁺ + CO₃²⁻ → CaCO₃",
     text: "É assim que corais, moluscos e plâncton calcificado constroem conchas e esqueletos. Sem carbonato suficiente, o animal gasta mais energia para se construir — e conchas já prontas podem começar a dissolver.",
   },
