@@ -116,7 +116,7 @@ function FenomenoPage() {
             </p>
             <ul className="mt-4 space-y-2.5 text-sm">
               <li className="rounded-2xl bg-secondary/70 px-4 py-2.5">
-                <strong className="text-primary">El Niño</strong> — anomalia média de 3
+                <strong className="text-chart-3">El Niño</strong> — anomalia média de 3
                 meses <strong>≥ +0,5 °C</strong>
               </li>
               <li className="rounded-2xl bg-secondary/70 px-4 py-2.5">
@@ -124,7 +124,7 @@ function FenomenoPage() {
                 e +0,5 °C
               </li>
               <li className="rounded-2xl bg-secondary/70 px-4 py-2.5">
-                <strong className="text-chart-3">La Niña</strong> — anomalia média de 3
+                <strong className="text-primary">La Niña</strong> — anomalia média de 3
                 meses <strong>≤ −0,5 °C</strong>
               </li>
             </ul>
@@ -177,7 +177,7 @@ function FenomenoPage() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {EVENTS.map((event) => (
             <div key={event.period} className="rounded-3xl border border-border bg-card p-5">
-              <p className="font-display text-xl font-extrabold text-primary">{event.period}</p>
+              <p className="font-display text-xl font-extrabold text-chart-3">{event.period}</p>
               <h3 className="mt-1 text-sm font-bold text-foreground">{event.name}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{event.text}</p>
             </div>
