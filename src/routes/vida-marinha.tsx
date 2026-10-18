@@ -24,7 +24,7 @@ export const Route = createFileRoute("/vida-marinha")({
     meta: [
       {
         title:
-          "Vida marinha e Ecossistema: e como fica o oceano? | El Niño.guiado",
+          "Vida marinha e Ecossistema: Oceano e vida | El Niño.guiado",
       },
       {
         name: "description",
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/vida-marinha")({
       },
       {
         property: "og:title",
-        content: "Vida marinha e Ecossistema: e como fica o oceano?",
+        content: "Vida marinha e Ecossistema: Oceano e vida",
       },
       {
         property: "og:description",
@@ -156,8 +156,8 @@ function VidaMarinhaPage() {
   return (
     <div>
       <PageHero
-        kicker="Capítulo 3 · Como fica o oceano?"
-        title="Vida marinha e Ecossistema: e como fica o oceano?"
+        kicker="Capítulo 3 · Oceano e vida"
+        title="Vida marinha e Ecossistema: Oceano e vida"
         lead="Antes de aparecer na previsão do tempo, o El Niño aparece na vida selvagem: corais esbranquiçados, peixes que somem das redes dos pescadores e aves que abandonam ninhadas. Três grandes processos explicam essa mudança — e uma quarta força, silenciosa, age ao mesmo tempo: a acidificação do oceano."
       >
         <nav aria-label="Nesta página" className="mt-8 flex flex-wrap gap-2">

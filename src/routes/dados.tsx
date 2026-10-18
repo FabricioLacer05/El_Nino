@@ -89,7 +89,7 @@ function DadosPage() {
   return (
     <div>
       <PageHero
-        kicker="Capítulo 5 · Histórico do fenômeno"
+        kicker="Capítulo 5 · Histórico"
         title="Lendo o El Niño em números"
         lead="Três gráficos, três histórias: a força de cada episódio, a temperatura do planeta e a química do oceano. Os valores são aproximados a partir de fontes oficiais, com finalidade didática."
       />

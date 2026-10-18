@@ -48,7 +48,7 @@ const INSTITUTIONS = [
   {
     name: "NASA — GISTEMP: Global Temperature Anomalies",
     url: "https://data.giss.nasa.gov/gistemp/",
-    note: "Série de anomalias de temperatura global usada no gráfico da página Histórico do fenômeno.",
+    note: "Série de anomalias de temperatura global usada no gráfico da página Histórico.",
   },
   {
     name: "WMO — El Niño/La Niña Updates (Organização Meteorológica Mundial)",
