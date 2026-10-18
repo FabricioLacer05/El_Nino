@@ -199,7 +199,7 @@ function VidaMarinhaPage() {
 
         <p className="mt-6 max-w-3xl text-base leading-relaxed text-foreground/90">
           É um efeito cascata: menos nutrientes → menos fitoplâncton → menos
-          zoplâncton → menos anchoveta → menos aves marinhas, lobos-marinhos e
+          zooplâncton → menos anchoveta → menos aves marinhas, lobos-marinhos e
           peixes predadores. A pesca da{" "}
           <strong>anchoveta peruana</strong> — maior pesca de espécie única do
           mundo — já colapsou em anos de El Niño (como em 1972–73 e 1982–83),
