@@ -177,7 +177,7 @@ function FenomenoPage() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {EVENTS.map((event) => (
             <div key={event.period} className="rounded-3xl border border-border bg-card p-5">
-              <p className="font-display text-xl font-extrabold text-primary">{event.period}</p>
+              <p className="font-display text-xl font-extrabold text-chart-3">{event.period}</p>
               <h3 className="mt-1 text-sm font-bold text-foreground">{event.name}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{event.text}</p>
             </div>
