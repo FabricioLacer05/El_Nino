@@ -17,9 +17,9 @@ const NAV_LINKS = [
   { to: "/", label: "Início" },
   { to: "/o-fenomeno", label: "O Fenômeno" },
   { to: "/consequencias", label: "Consequências" },
-  { to: "/vida-marinha", label: "Como fica o oceano?" },
+  { to: "/vida-marinha", label: "Oceano e vida" },
   { to: "/brasil", label: "Brasil" },
-  { to: "/dados", label: "Histórico do fenômeno" },
+  { to: "/dados", label: "Histórico" },
   { to: "/referencias", label: "Referências" },
 ] as const;
 

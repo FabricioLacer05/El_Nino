@@ -107,10 +107,10 @@ export function PacificDiagram({ compact = false }: { compact?: boolean }) {
         {/* continentes */}
         <path d="M 0 120 L 58 96 L 86 110 L 96 132 L 96 300 L 0 300 Z" fill="oklch(0.72 0.1 105)" />
         <path d="M 640 120 L 596 104 L 570 116 L 556 138 L 548 168 L 552 300 L 640 300 Z" fill="oklch(0.72 0.1 105)" />
-        <text x="48" y="88" textAnchor="end" fontSize="13" fontWeight="700" fill="oklch(0.35 0.08 140)">
+        <text x="8" y="88" textAnchor="start" fontSize="13" fontWeight="700" fill="oklch(0.35 0.08 140)">
           Ásia / Indonésia
         </text>
-        <text x="586" y="94" textAnchor="start" fontSize="13" fontWeight="700" fill="oklch(0.35 0.08 140)">
+        <text x="632" y="94" textAnchor="end" fontSize="13" fontWeight="700" fill="oklch(0.35 0.08 140)">
           América do Sul
         </text>
 
@@ -148,12 +148,12 @@ export function PacificDiagram({ compact = false }: { compact?: boolean }) {
         {!isNino ? (
           <>
             <g stroke="oklch(0.4 0.09 252)" strokeWidth="3" markerEnd="url(#diagram-arrow)">
-              <line x1="210" y1="62" x2="290" y2="62" />
-              <line x1="250" y1="86" x2="330" y2="86" />
-              <line x1="300" y1="108" x2="380" y2="108" />
+              <line x1="290" y1="62" x2="210" y2="62" />
+              <line x1="330" y1="86" x2="250" y2="86" />
+              <line x1="380" y1="108" x2="300" y2="108" />
             </g>
             <text x="300" y="34" textAnchor="middle" fontSize="13" fontWeight="700" fill="oklch(0.34 0.09 252)">
-              Ventos alísios fortes →
+              ← Ventos alísios fortes (para a Indonésia)
             </text>
           </>
         ) : (
@@ -163,7 +163,7 @@ export function PacificDiagram({ compact = false }: { compact?: boolean }) {
               <line x1="330" y1="86" x2="280" y2="86" />
             </g>
             <text x="300" y="34" textAnchor="middle" fontSize="13" fontWeight="700" fill="oklch(0.34 0.09 252)">
-              Alísios enfraquecidos ←
+              Alísios enfraquecidos
             </text>
           </>
         )}
