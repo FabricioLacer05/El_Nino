@@ -1,14 +1,16 @@
-# Welcome to your Lovable project
+# Pacific Pulse Explorer
+
+Crie um site sobre informativo educativo El Niño para estudantes do ensino médio. Ele deve explicar o fenômeno, consequências socioambientais, impactos em ecossistemas, uma seção especial sobre o Brasil, gráficos, mapas, referências científicas, design moderno e relacionado ao oceano com tons claros destaques em azul. Adicione uma seção sobre impacto em organismos marinhos e acidificação dos oceano. Projeto do El Niño como nosso primeiro projeto real de programação
 
 This project was built with [Lovable](https://lovable.dev).
 
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/0bc909b9-1147-4470-ac79-0d593074f1f1).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +22,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
