@@ -97,7 +97,7 @@ function FenomenoPage() {
             <p>
               O nome completo do sistema é <strong>ENSO — El Niño–Oscilação Sul</strong> —
               porque o oceano e a atmosfera agem como um só: a pressão sobe em
-              Tahiti quando desce em Darwin (Austrália), como uma gangorra. Essa
+              Taiti quando desce em Darwin (Austrália), como uma gangorra. Essa
               “oscilação sul” é a parte atmosférica; o El Niño é a parte oceânica.
             </p>
             <p>
