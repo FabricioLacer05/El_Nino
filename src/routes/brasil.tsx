@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Droplets, Gauge, HeartPulse, Sprout, Sun } from "lucide-react";
+import { Check, Droplets, Gauge, HeartPulse, Sprout, Sun } from "lucide-react";
 
 import amazonDrought from "../assets/amazon-drought.jpg";
 import { BrazilMap } from "../components/brazil-map";
@@ -36,7 +36,14 @@ const REGIONS = [
     slug: "regiao-norte",
     impact: "Seca severa",
     detail:
-      "Rios encolhem, comunidades ribeirinhas ficam isoladas e as queimadas se multiplicam. Em 2023, o Rio Negro chegou ao menor nível já medido em Manaus em mais de 120 anos.",
+      "Sob o aquecimento do Pacífico, as chuvas na Amazônia despencam e o calor fica acima da média — o cenário que já levou o Rio Negro ao menor nível medido em Manaus em mais de 120 anos.",
+    topics: [
+      "Seca severa e prolongada",
+      "Redução drástica das chuvas na Amazônia",
+      "Temperaturas acima da média",
+      "Aumento do risco de queimadas e incêndios florestais",
+      "Queda no nível dos rios, afetando o transporte fluvial, o abastecimento de água, a produção agrícola e a pesca",
+    ],
     dot: "bg-chart-4",
     more: { href: "#amazonia", label: "A Amazônia em chamas e seca" },
   },
@@ -45,25 +52,46 @@ const REGIONS = [
     slug: "regiao-nordeste",
     impact: "Seca no semiárido",
     detail:
-      "Chuvas ficam abaixo da média no semiárido, afetando reservatórios e a agricultura de subsistência; o litoral pode ter chuvas irregulares.",
+      "A quadra chuvosa fica mais curta — é como se um período seco emendasse no outro, alongando a estiagem no semiárido.",
+    topics: [
+      "Redução da duração da quadra chuvosa, o que pode prolongar muito o período de estiagem",
+      "Temperaturas acima da média",
+      "Menor disponibilidade de água em rios e reservatórios",
+      "Prejuízos para a agricultura dependente de chuva",
+      "Plantações e criação de animais prejudicadas pela seca e pela falta de água",
+    ],
     dot: "bg-chart-5",
     more: { href: "#cotidiano", label: "Água, energia e agricultura" },
   },
   {
     name: "Centro-Oeste",
     slug: "regiao-centro-oeste",
-    impact: "Chuvas atrasadas",
+    impact: "Seca e calor",
     detail:
-      "O plantio da soja atrasa e o milho “safrinha” pode ser semeado fora da janela ideal, quando as chuvas já estão recuando.",
+      "O coração agrícola do país enfrenta um período seco mais longo, com mais calor e mais fogo — e as safras pagam a conta.",
+    topics: [
+      "Temperaturas mais elevadas",
+      "Prolongamento do período seco",
+      "Aumento do risco de queimadas e incêndios florestais",
+      "Perdas na produção de soja, milho e outros produtos agrícolas",
+    ],
     dot: "bg-chart-2",
     more: { href: "#cotidiano", label: "Impactos na agricultura" },
   },
   {
     name: "Sudeste",
     slug: "regiao-sudeste",
-    impact: "Padrão misto",
+    impact: "Calor e chuvas irregulares",
     detail:
-      "Chuvas irregulares e calor extremo; em alguns episódios há blocos de ar seco e recordes de temperatura nas grandes cidades.",
+      "Calor recorde e chuvas que não chegam quando deveriam: a estação chuvosa começa irregular e algumas áreas passam por estiagem.",
+    topics: [
+      "Temperaturas acima da média",
+      "Ondas de calor mais frequentes e duradouras",
+      "Irregularidade das chuvas no início da estação chuvosa",
+      "Maior risco de períodos de estiagem em algumas áreas",
+      "Aumento da demanda por água e energia por causa do calor",
+      "Perdas possíveis na agricultura e no abastecimento de água",
+    ],
     dot: "bg-chart-1",
     more: { href: "#cotidiano", label: "Energia elétrica e saúde" },
   },
@@ -72,7 +100,12 @@ const REGIONS = [
     slug: "regiao-sul",
     impact: "Chuvas acima da média",
     detail:
-      "Passagens de frentes frias e umidade extra intensificam tempestades e enchentes — como as do Rio Grande do Sul em 2023 e 2024.",
+      "Uma das regiões que mais sente o El Niño: o excesso de umidade do Pacífico se transforma em tempestades e tragédias.",
+    topics: [
+      "Chuvas excessivas e tempestades frequentes, podendo causar enchentes e alagamentos",
+      "Maior ocorrência de deslizamentos de terra em áreas vulneráveis",
+      "Perda de plantações e da produção agrícola por causa do excesso de chuva, das enchentes e dos alagamentos",
+    ],
     dot: "bg-chart-3",
     more: { href: "/consequencias", label: "Enchentes e efeitos na América do Sul" },
   },
@@ -146,6 +179,14 @@ function BrasilPage() {
                   </span>
                 </div>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{region.detail}</p>
+                <ul className="mt-3 space-y-1.5">
+                  {region.topics.map((topic) => (
+                    <li key={topic} className="flex gap-2 text-sm leading-snug text-foreground/85">
+                      <Check className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden />
+                      <span>{topic}</span>
+                    </li>
+                  ))}
+                </ul>
                 <a
                   href={region.more.href}
                   className="mt-3 inline-block text-sm font-semibold text-primary hover:underline"
@@ -156,6 +197,15 @@ function BrasilPage() {
             ))}
           </div>
         </div>
+        <Callout title="Um Super El Niño em curso">
+          O aquecimento do Pacífico Equatorial altera a circulação dos ventos e a distribuição de
+          calor e umidade na atmosfera, modificando o clima de várias regiões do mundo. Especialistas
+          classificam o episódio atual como um <strong>Super El Niño</strong>: a Organização
+          Meteorológica Mundial (OMM) prevê a intensificação do fenômeno nos próximos meses, com
+          probabilidade próxima de 100% de que seus efeitos sejam sentidos até fevereiro de 2027. O
+          resultado no Brasil é o país enfrentando extremos opostos — <strong>seca prolongada</strong>{" "}
+          no Norte, Nordeste e Centro-Oeste e <strong>chuvas severas</strong> no Sul.
+        </Callout>
       </Section>
 
       <Section title="A Amazônia em chamas e seca" id="amazonia">
