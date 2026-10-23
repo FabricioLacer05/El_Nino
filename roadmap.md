@@ -1,5 +1,7 @@
 # Roadmap — El Niño.guiado
 
+- [ ] Ordenar artigos alfabeticamente, incluir referências ausentes do arquivo enviado e atualizar/adicionar fontes institucionais com os links fornecidos.
+
 - [x] Tema oceano claro (tokens oklch, fontes, imagens)
 - [x] Página inicial com diagrama interativo do Pacífico
 - [x] 7 seções de conteúdo (fenômeno, consequências, ecossistemas, vida marinha, Brasil, dados, referências)
