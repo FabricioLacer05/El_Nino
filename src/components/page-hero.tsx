@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 
+import { cn } from "../lib/utils";
+
 export function PageHero({
   kicker,
   title,
@@ -32,14 +34,22 @@ export function Section({
   eyebrow,
   children,
   id,
+  className,
 }: {
   title: string;
   eyebrow?: string;
   children: ReactNode;
   id?: string;
+  className?: string;
 }) {
   return (
-    <section id={id} className="mx-auto max-w-6xl scroll-mt-24 px-4 py-12 sm:px-6 sm:py-16">
+    <section
+      id={id}
+      className={cn(
+        "mx-auto max-w-6xl scroll-mt-24 px-4 py-12 sm:px-6 sm:py-16",
+        className,
+      )}
+    >
       {eyebrow && (
         <p className="text-sm font-bold tracking-widest text-primary uppercase">{eyebrow}</p>
       )}

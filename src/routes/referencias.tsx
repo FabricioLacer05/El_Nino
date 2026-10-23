@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 
 import { Callout, PageHero, Section } from "../components/page-hero";
 
@@ -189,7 +189,11 @@ function ReferenciasPage() {
         </div>
       </Section>
 
-      <Section title="Autores do projeto" eyebrow="Quem fez este site">
+      <Section
+        title="Autores do projeto"
+        eyebrow="Quem fez este site"
+        className="pt-0 sm:pt-4"
+      >
         <div className="max-w-3xl space-y-4">
           <ul className="list-disc space-y-1.5 pl-6 text-base leading-relaxed text-foreground/90 marker:text-primary">
             <li>Fabrício de Almeida Lacerda</li>
@@ -201,13 +205,13 @@ function ReferenciasPage() {
           </ul>
           <p className="text-sm text-muted-foreground">
             <a
-              href="/README.md"
+              href="https://github.com/FabricioLacer05/El_Nino"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 font-semibold text-primary underline-offset-2 hover:underline"
             >
-              Ler o README do projeto
-              <ExternalLink className="size-3.5" aria-hidden />
+              Ver o repositório no GitHub
+              <Github className="size-4" aria-hidden />
             </a>
           </p>
         </div>
