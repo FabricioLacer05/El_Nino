@@ -1,6 +1,6 @@
 # Roadmap — El Niño.guiado
 
-- [ ] Ordenar artigos alfabeticamente, incluir referências ausentes do arquivo enviado e atualizar/adicionar fontes institucionais com os links fornecidos.
+- [x] Ordenar artigos alfabeticamente, incluir referências ausentes do arquivo enviado e atualizar/adicionar fontes institucionais com os links fornecidos (19 referências e 12 fontes institucionais verificadas).
 
 - [x] Tema oceano claro (tokens oklch, fontes, imagens)
 - [x] Página inicial com diagrama interativo do Pacífico
