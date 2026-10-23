@@ -161,8 +161,17 @@ function ReferenciasPage() {
             de acesso):
           </p>
           <div className="rounded-3xl border border-border bg-foam/70 p-6 font-mono text-sm leading-relaxed">
-            EL NIÑO.guiado. Guia educativo sobre o fenômeno El Niño. 2026.
-            Disponível em: &lt;endereço-do-site&gt;. Acesso em: 25 set. 2026.
+            EL NIÑO.guiado. <strong>Guia educativo sobre o fenômeno El Niño</strong>.
+            2026. Disponível em:{" "}
+            <a
+              href="https://elninoguiado.lovable.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary underline underline-offset-2"
+            >
+              https://elninoguiado.lovable.app
+            </a>
+            . Acesso em: 25 set. 2026.
           </div>
           <Callout title="Pense como cientista">
             Repare que todas as fontes acima são de instituições de pesquisa ou
@@ -176,6 +185,30 @@ function ReferenciasPage() {
               “O Fenômeno”
             </Link>{" "}
             e tente explicar o diagrama do Pacífico sem olhar as legendas.
+          </p>
+        </div>
+      </Section>
+
+      <Section title="Autores do projeto" eyebrow="Quem fez este site">
+        <div className="max-w-3xl space-y-4">
+          <ul className="list-disc space-y-1.5 pl-6 text-base leading-relaxed text-foreground/90 marker:text-primary">
+            <li>Fabrício de Almeida Lacerda</li>
+            <li>Gabriel Fonseca Lins</li>
+            <li>Gabrielle Maria de Souza</li>
+            <li>Herley Bastos de Assis</li>
+            <li>Letícia de Oliveira Siqueira</li>
+            <li>Maria Virgínia de Sousa Carlos da Silva</li>
+          </ul>
+          <p className="text-sm text-muted-foreground">
+            <a
+              href="/README.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-semibold text-primary underline-offset-2 hover:underline"
+            >
+              Ler o README do projeto
+              <ExternalLink className="size-3.5" aria-hidden />
+            </a>
           </p>
         </div>
       </Section>
