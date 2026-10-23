@@ -161,8 +161,17 @@ function ReferenciasPage() {
             de acesso):
           </p>
           <div className="rounded-3xl border border-border bg-foam/70 p-6 font-mono text-sm leading-relaxed">
-            EL NIÑO.guiado. Guia educativo sobre o fenômeno El Niño. 2026.
-            Disponível em: &lt;endereço-do-site&gt;. Acesso em: 25 set. 2026.
+            EL NIÑO.guiado. <strong>Guia educativo sobre o fenômeno El Niño</strong>
+            . 2026. Disponível em:{" "}
+            <a
+              href="https://elninoguiado.lovable.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary underline underline-offset-2"
+            >
+              https://elninoguiado.lovable.app
+            </a>
+            . Acesso em: 25 set. 2026.
           </div>
           <Callout title="Pense como cientista">
             Repare que todas as fontes acima são de instituições de pesquisa ou
