@@ -1,24 +1,29 @@
-# Pacific Pulse Explorer
+# El Niño Guiado
+### Projeto extensionista "El Niño - O Gigante do Pacífico"
+#### UNESA, 2026. Curso de bacharel em Ciências Biológicas
 
-Crie um site sobre informativo educativo El Niño para estudantes do ensino médio. Ele deve explicar o fenômeno, consequências socioambientais, impactos em ecossistemas, uma seção especial sobre o Brasil, gráficos, mapas, referências científicas, design moderno e relacionado ao oceano com tons claros destaques em azul. Adicione uma seção sobre impacto em organismos marinhos e acidificação dos oceano. Projeto do El Niño como nosso primeiro projeto real de programação
+O El Niño Guiado é um site de educação ambiental informativo acerca do fenômeno climático El Niño, direcionado ao público geral. Ele foi construído com o objetivo de reforçar o conteúdo teórico do projeto de extensão universitária "El Niño - O Gigante do Pacífico", criado pelos autores destacados abaixo para levar ao público mais leigo o que é, como acontece e quais são os efeitos do El Niño no Brasil e no restante do mundo.
 
-This project was built with [Lovable](https://lovable.dev).
+O site é estruturado em formato de capítulos, com cada um se destinando a uma faceta do El Niño. Ao final, as referências dos dados são listadas para consulta e uma leitura ainda mais detalhada. Tudo sempre numa linguagem acessível e interface prática, que se adapta a qualquer formato de tela.
 
-## Build with Lovable
+#### Capítulos (Em ordem recomendada de leitura):
+1. Início
+2. O Fenômeno
+3. Consequências
+4. Oceano e Vida
+5. Brasil
+6. Histórico
+7. Referências bibliográficas
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/0bc909b9-1147-4470-ac79-0d593074f1f1).
+### Autores do projeto:
+- Fabrício de Almeida Lacerda
+- Gabriel Fonseca Lins
+- Gabrielle Maria de Souza
+- Herley Bastos de Assis
+- Letícia de Oliveira Siqueira
+- Maria Virgínia de Sousa Carlos da Silva
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+### Responsáveis pela criação do site:
+Fabrício Lacerda e Maria Virgínia Carlos
 
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+Todo o site também foi produzido com a ajuda do [Lovable](https://lovable.dev).
