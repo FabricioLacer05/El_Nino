@@ -161,8 +161,8 @@ function ReferenciasPage() {
             de acesso):
           </p>
           <div className="rounded-3xl border border-border bg-foam/70 p-6 font-mono text-sm leading-relaxed">
-            EL NIÑO.guiado. <strong>Guia educativo sobre o fenômeno El Niño</strong>
-            . 2026. Disponível em:{" "}
+            EL NIÑO.guiado. <strong>Guia educativo sobre o fenômeno El Niño</strong>.
+            2026. Disponível em:{" "}
             <a
               href="https://elninoguiado.lovable.app"
               target="_blank"
